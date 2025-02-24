@@ -24,7 +24,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold">
-          Hey, I'm <span className="text-blue-400">Ravi</span>
+          Hey, I&apos;m <span className="text-blue-400">Ravi</span>
         </h1>
         <p className="text-lg md:text-xl mt-2">
           MERN Stack & React Native Developer | Passionate about building scalable web & mobile apps
