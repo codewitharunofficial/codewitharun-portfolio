@@ -8,6 +8,14 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "eslintConfig": {
+    "extends": "next/core-web-vitals",
+    "rules": {
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@next/next/no-img-element": "warn"
+    }
+  },
   "dependencies": {
     "next": "15.1.7",
     "react": "^19.0.0",

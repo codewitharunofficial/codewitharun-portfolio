@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Profile from "@/public/Profile.jpg";
-import { SiGithub, SiMarkdown } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 import { BiPhone, BiSolidDownload } from "react-icons/bi";
 
 const Hero = () => {
