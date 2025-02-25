@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Profile from "@/public/Profile.jpg";
 import { SiGithub } from "react-icons/si";
-import { BiFile, BiPhone, BiSolidDownload } from "react-icons/bi";
+import { BiFile, BiPhone } from "react-icons/bi";
 
 const Hero = () => {
   return (
@@ -14,7 +14,6 @@ const Hero = () => {
         src={Profile}
         alt="Profile Background"
         layout="fill"
-        
         objectPosition="left"
         quality={100}
         priority
