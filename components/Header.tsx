@@ -16,11 +16,11 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black bg-opacity-90 shadow-lg" : "bg-transparent"
+        scrolled ? "bg-blue-900 bg-opacity-90 shadow-lg" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-        <h1 className="text-white text-2xl font-bold">Ravi</h1>
+        <h1 className="text-white text-2xl font-bold font-serif ">Ravi</h1>
         <nav>
           <ul className="flex md:space-x-6 space-x-4 text-white">
             <li className="hover:underline underline-offset-2">

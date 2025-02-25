@@ -1,203 +1,177 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+"use client";
 
-const projects = {
-  mobileApps: [
-    {
-      name: "Gaao - The Karaoke App",
-      logo: "/logos/Gaao-Icon.png",
-      description:
-        "Gaao is a karaoke app that allows users to record their singing, apply audio effects, and share with friends.",
-      features: [
-        "Record vocals",
-        "Apply reverb & effects",
-        "Real-time preview",
-        "Save and share recordings",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/gaao",
-      appLink: "https://play.google.com/store/apps/details?id=com.gaao",
-    },
-    {
-      name: "Chattr",
-      logo: "/logos/Chattr.png",
-      description:
-        "Chatrr is a real-time messaging app with text, voice, and video calling features.",
-      features: [
-        "End-to-end encryption",
-        "Voice & video calls",
-        "Media sharing",
-        "Group chats",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/chatrr",
-      appLink: "https://play.google.com/store/apps/details?id=com.chatrr",
-    },
-    {
-      name: "One-Stop - Video Streaming App",
-      logo: "/logos/One-Stop.png",
-      description:
-        "One-Stop is a video streaming app that allows users to watch and manage their favorite videos.",
-      features: [
-        "HD streaming",
-        "Offline downloads",
-        "Subscription model",
-        "Multi-device support",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/onestop",
-      appLink: "https://play.google.com/store/apps/details?id=com.onestop",
-    },
-  ],
-  webApps: [
-    {
-      name: "Chattr-Web",
-      logo: "/logos/Chattr.png",
-      description:
-        "Chattr-Web is the web version of Chatrr, providing real-time messaging and calling features.",
-      features: [
-        "WebRTC-based calls",
-        "Secure messaging",
-        "Responsive UI",
-        "Group chats",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/chattr-web",
-      appLink: "https://chattr-web.vercel.app",
-    },
-    {
-      name: "InsecView",
-      logo: "/logos/insecview.webp",
-      description:
-        "InsecView is a security surveillance platform that allows users to monitor live CCTV feeds remotely.",
-      features: [
-        "Live video feed",
-        "Motion detection alerts",
-        "Cloud storage",
-        "Multi-camera support",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/insecview",
-      appLink: "https://insecview.com",
-    },
-    {
-      name: "Shopease",
-      logo: "/logos/shopease.png",
-      description:
-        "Shopease is an e-commerce platform that offers a seamless shopping experience with smart recommendations.",
-      features: [
-        "AI-powered recommendations",
-        "One-click checkout",
-        "Multiple payment options",
-        "User reviews",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/shopease",
-      appLink: "https://shopease.com",
-    },
-  ],
-};
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { projects } from "@/contants/projects";
 
 const Projects = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [category, setCategory] = useState<"mobileApps" | "webApps">(
+    "mobileApps"
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedScreenshot, setSelectedScreenshot] = useState<string | null>(
+    null
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(
+        (prevIndex) => (prevIndex + 1) % projects[category].length
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [category]);
+
+  const handleCategoryChange = (newCategory: "mobileApps" | "webApps") => {
+    setCategory(newCategory);
+    setActiveIndex(0);
+  };
+
+  const openModal = (screenshot: string) => {
+    setSelectedScreenshot(screenshot);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedScreenshot(null);
+  };
+
+  const project = projects[category][activeIndex];
+
   return (
     <section
-      style={{
-        backgroundImage: "url(/Background.webp)",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-      className="container mx-auto py-16 px-6"
+      style={{ backgroundImage: "url(/Background.webp)" }}
+      className="py-16 bg-gray-900 text-white text-center"
     >
-      <h2 className="text-3xl font-bold text-center">My Projects</h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-8">🚀 My Projects</h2>
 
-      {/* Mobile Apps Section */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-semibold mb-4">📱 Mobile Apps</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.mobileApps.map((project, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 text-white p-4 rounded-lg shadow-md flex flex-col items-center"
-            >
-              <img
-                src={project.logo}
-                alt={project.name}
-                className="h-16 mb-4 rounded"
-              />
-              <h4 className="text-xl font-semibold">{project.name}</h4>
-              <p className="text-gray-300 text-sm text-center">
-                {project.description}
-              </p>
-              <ul className="text-sm mt-2 list-disc list-inside">
-                {project.features.map((feature, i) => (
-                  <li key={i} className="text-gray-400">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex mt-4 gap-3">
-                <a
-                  href={project.repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 flex items-center gap-1"
-                >
-                  <FaGithub /> Code
-                </a>
-                <a
-                  href={project.appLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-400 flex items-center gap-1"
-                >
-                  <FaExternalLinkAlt /> App
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="flex justify-center space-x-4 mb-6">
+        <button
+          className={`px-4 py-2 rounded-lg ${
+            category === "mobileApps" ? "bg-blue-500" : "bg-gray-700"
+          }`}
+          onClick={() => handleCategoryChange("mobileApps")}
+        >
+          📱 Mobile Apps
+        </button>
+        <button
+          className={`px-4 py-2 rounded-lg ${
+            category === "webApps" ? "bg-blue-500" : "bg-gray-700"
+          }`}
+          onClick={() => handleCategoryChange("webApps")}
+        >
+          💻 Web Apps
+        </button>
       </div>
 
-      {/* Web Apps Section */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-semibold mb-4">💻 Web Apps</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.webApps.map((project, index) => (
-            <div
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+        <motion.div
+          key={project.name}
+          className="max-w-lg text-left px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="flex items-center gap-4">
+            <img
+              src={project.logo}
+              alt="App Logo"
+              className="w-12 h-12 rounded-lg"
+            />
+            <h3 className="text-2xl font-semibold">{project.name}</h3>
+          </div>
+          <p className="mt-2 text-gray-300">{project.description}</p>
+          <ul className="mt-2 list-disc pl-5 text-gray-400">
+            {project.features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+          <div className="mt-4">
+            <a
+              href={project.repoLink}
+              className="text-blue-400 hover:underline mr-4"
+              target="_blank"
+            >
+              🔗 GitHub Repo
+            </a>
+            <a
+              href={project.appLink}
+              className="text-green-400 hover:underline"
+              target="_blank"
+            >
+              🚀 View App
+            </a>
+          </div>
+        </motion.div>
+
+        <Swiper
+          modules={[Autoplay, Pagination, Navigation]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          navigation
+          loop
+          className="w-[300px] md:w-[400px] rounded-lg overflow-hidden shadow-lg"
+        >
+          {project.screenshots.map((screenshot, index) => (
+            <SwiperSlide
               key={index}
-              className="bg-gray-800 text-white p-4 rounded-lg shadow-md flex flex-col items-center"
+              className="flex items-center justify-center cursor-pointer"
+              onClick={() => openModal(screenshot)}
+            >
+              <motion.img
+                src={screenshot}
+                alt="Project Screenshot"
+                className="w-full h-[300px] object-contain rounded-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      
+      <AnimatePresence>
+        {isModalOpen && selectedScreenshot && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={closeModal}
+          >
+            <motion.div
+              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={project.logo}
-                alt={project.name}
-                className="h-16 mb-4"
+                src={selectedScreenshot}
+                alt="Expanded Screenshot"
+                className="w-full h-full rounded-lg"
               />
-              <h4 className="text-xl font-semibold">{project.name}</h4>
-              <p className="text-gray-300 text-sm text-center">
-                {project.description}
-              </p>
-              <ul className="text-sm mt-2 list-disc list-inside">
-                {project.features.map((feature, i) => (
-                  <li key={i} className="text-gray-400">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex mt-4 gap-3">
-                <a
-                  href={project.repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 flex items-center gap-1"
-                >
-                  <FaGithub size={20} /> Code
-                </a>
-                <a
-                  href={project.appLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-400 flex items-center gap-1"
-                >
-                  <FaExternalLinkAlt /> Live
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 px-3 py-1 bg-red-500 text-white rounded-lg"
+              >
+                ✖
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

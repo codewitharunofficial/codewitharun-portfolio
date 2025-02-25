@@ -5,14 +5,14 @@ const qualifications = [
   
   const Qualifications = () => {
     return (
-      <section style={{backgroundColor: "#613E7f"}} className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center">Qualifications</h2>
+      <section style={{backgroundColor: '#100465ff'}} className="container mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold text-center text-white">Qualifications</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           {qualifications.map((qual, index) => (
             <div key={index} className="bg-gray-800 hover:bg-gray-700 text-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold">{qual.degree}</h3>
-              <p className="text-gray-300">{qual.institute}</p>
-              <p className="text-sm text-gray-400">{qual.year}</p>
+              <p className="text-blue-400">{qual.institute}</p>
+              <p className="text-sm text-green-400">{qual.year}</p>
             </div>
           ))}
         </div>

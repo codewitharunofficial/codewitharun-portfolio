@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div>
       {Components.map((item, index) => (
-        <div key={index} className="scroll-smooth">
+        <div key={index} className="scroll-smooth" style={{backgroundColor: item.id !== 'hero' ? '#100465ff' : "" }}>
           <section id={item.id}>{item.component}</section>
         </div>
       ))}
