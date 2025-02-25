@@ -76,7 +76,7 @@ export const projects = {
         "Group chats",
       ],
       repoLink: "https://github.com/codewitharunofficial/chattr-web",
-      appLink: "https://chattr-web.onrender.com",
+      appLink: "https://chatrr-web.onrender.com",
       screenshots: [
         "/screenshots/chattr-web/chattr-web-1.png",
         "/screenshots/chattr-web/chattr-web-2.png",
