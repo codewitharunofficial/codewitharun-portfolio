@@ -36,10 +36,9 @@ export const projects = {
       appLink: "https://expo.dev/artifacts/eas/dtt9tA6Ce34nDRrt6uJmVm.apk",
       screenshots: [
         "/screenshots/chattr/chattr-1.jpg",
-        "/screenshots/chattr/chattr-1.jpg",
-        "/screenshots/chattr/chattr-1.jpg",
-        "/screenshots/chattr/chattr-1.jpg",
-        "/screenshots/chattr/chattr-1.jpg",
+        "/screenshots/chattr/chattr-2.jpg",
+        "/screenshots/chattr/chattr-3.jpg",
+        "/screenshots/chattr/chattr-4.jpg",
       ],
     },
     {

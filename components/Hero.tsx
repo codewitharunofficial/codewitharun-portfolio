@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Profile from "@/public/Profile.jpg";
 import { SiGithub } from "react-icons/si";
-import { BiPhone, BiSolidDownload } from "react-icons/bi";
+import { BiFile, BiPhone, BiSolidDownload } from "react-icons/bi";
 
 const Hero = () => {
   return (
@@ -14,11 +14,11 @@ const Hero = () => {
         src={Profile}
         alt="Profile Background"
         layout="fill"
-        objectFit="cover"
+        
         objectPosition="left"
         quality={100}
         priority
-        className="-z-10"
+        className="-z-10 lg:object-contain bg-blue-500 object-cover"
       />
 
       {/* Overlay for better text visibility */}
@@ -81,12 +81,13 @@ const Hero = () => {
             Contact Me
           </a>
           <a
-            href="/resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-700 hover:bg-green-800 text-white font-semibold py-2 px-2 md:px-3 rounded-md flex items-center gap-2"
+            download={true}
           >
-            <BiSolidDownload size={24} />
+            <BiFile size={24} />
             Resume
           </a>
           <a

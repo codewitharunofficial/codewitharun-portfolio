@@ -22,7 +22,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
         <h1 className="text-white text-2xl font-bold font-serif ">Ravi</h1>
         <nav>
-          <ul className="flex md:space-x-6 space-x-4 text-white">
+          <ul className="flex space-x-2 md:space-x-4 text-white">
             <li className="hover:underline underline-offset-2">
               <a href="#hero" className="hover:text-blue-400">
                 About
