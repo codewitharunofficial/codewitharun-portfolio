@@ -150,7 +150,7 @@ const Projects = () => {
             onClick={closeModal}
           >
             <motion.div
-              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative"
+              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative object-contain"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -160,7 +160,7 @@ const Projects = () => {
               <img
                 src={selectedScreenshot}
                 alt="Expanded Screenshot"
-                className="w-full h-full rounded-lg"
+                className="max-w-full max-h-svh rounded-lg"
               />
               <button
                 onClick={closeModal}

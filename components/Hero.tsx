@@ -40,8 +40,7 @@ const Hero = () => {
           >
             👋
           </motion.span>
-          , I&apos;m{" "}
-          <span className="text-blue-400 font-serif">Ravi</span>
+          , I&apos;m <span className="text-blue-400 font-serif">Ravi</span>
         </motion.h1>
 
         {/* Staggered Intro Text Animation */}
@@ -72,14 +71,16 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
         >
-          <a
+          <motion.a
+            whileHover={{ scale: 0.9, rotate: -5 }}
             href="mailto:kumarrvee@gmail.com"
             className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md flex items-center gap-2 text-sm"
           >
             <BiPhone size={24} />
             Contact Me
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 0.9, rotate: -5 }}
             href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -88,8 +89,9 @@ const Hero = () => {
           >
             <BiFile size={24} />
             Resume
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 0.9, rotate: -5 }}
             href="https://github.com/codewitharunofficial"
             target="_blank"
             rel="noopener noreferrer"
@@ -97,7 +99,7 @@ const Hero = () => {
           >
             <SiGithub size={24} />
             GitHub
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

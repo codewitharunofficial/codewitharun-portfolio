@@ -40,7 +40,7 @@ const Header = () => {
             </li>
             <li className="hover:underline underline-offset-2">
               <a href="#qualifications" className="hover:text-blue-400">
-                Qualifications
+                Education
               </a>
             </li>
           </ul>
