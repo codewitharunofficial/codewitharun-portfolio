@@ -62,6 +62,28 @@ export const projects = {
         "/screenshots/one-stop/one-stop-5.jpg",
       ],
     },
+    {
+      name: "Vibe - Music Streaming App",
+      logo: "/logos/vibe.png",
+      description:
+        "Vibe is a Music streaming app that allows users to Stream and manage their favorite Songs, create playlists and enjoy ad-free music.",
+      features: [
+        "HD streaming & Recommendations",
+        "Add To Favourites",
+        "Search Your Favourite Songs",
+        "Create Playlists",
+        "Queue Management",
+      ],
+      repoLink: "https://github.com/codewitharunofficial/vibe-the-music-streaming-app",
+      appLink: "https://expo.dev/artifacts/eas/vWCT2BF85RfwRZhEwdi5mw.apk",
+      screenshots: [
+        "/screenshots/vibe/vibe-1.jpg",
+        "/screenshots/vibe/vibe-2.jpg",
+        "/screenshots/vibe/vibe-3.jpg",
+        "/screenshots/vibe/vibe-4.jpg",
+        "/screenshots/vibe/vibe-5.jpg",
+      ],
+    },
   ],
   webApps: [
     {
