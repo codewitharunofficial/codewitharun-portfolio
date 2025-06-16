@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Profile from "@/public/Profile.jpg";
 import { SiGithub } from "react-icons/si";
-import { BiFile, BiMailSend, BiPhone } from "react-icons/bi";
+import { BiFile, BiMailSend } from "react-icons/bi";
 
 const Hero = () => {
   return (
