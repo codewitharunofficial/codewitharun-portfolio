@@ -2,7 +2,7 @@ const qualifications = [
   {
     degree: "Bachelor of Computer Applications",
     year: "2021-2024",
-    institute: "Maharshi Agrasen University, Uttarakhand",
+    institute: "Maharaja Agrasen University, Uttarakhand",
   },
   // { degree: "Full-Stack Developer Certification", year: "2022", institute: "Udemy" },
 ];
