@@ -32,7 +32,7 @@ const Header = () => {
             <ul className="flex space-x-4 text-white">
               <li>
                 <a
-                  href="#hero"
+                  href="#about"
                   className="hover:text-blue-400 hover:underline underline-offset-2"
                 >
                   About
@@ -98,7 +98,7 @@ const Header = () => {
         <ul className="flex flex-col space-y-6 px-6 text-lg">
           <li>
             <a
-              href="#hero"
+              href="#about"
               onClick={toggleMenu}
               className="hover:text-blue-400"
             >

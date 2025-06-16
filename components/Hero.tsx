@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Profile from "@/public/Profile.jpg";
 import { SiGithub } from "react-icons/si";
-import { BiFile, BiPhone } from "react-icons/bi";
+import { BiFile, BiMailSend, BiPhone } from "react-icons/bi";
 
 const Hero = () => {
   return (
@@ -76,7 +76,7 @@ const Hero = () => {
             href="mailto:kumarrvee@gmail.com"
             className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md flex items-center gap-2 text-sm"
           >
-            <BiPhone size={24} />
+            <BiMailSend size={24} />
             Contact Me
           </motion.a>
           <motion.a

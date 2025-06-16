@@ -8,7 +8,7 @@ import Experience from "@/components/Experience";
 const Components = [
   {
     component: <Hero />,
-    id: "hero",
+    id: "about",
   },
   {
     component: <Skills />,
@@ -39,7 +39,7 @@ export default function Home() {
         <div
           key={index}
           className="scroll-smooth"
-          style={{ backgroundColor: item.id !== "hero" ? "#100465ff" : "" }}
+          style={{ backgroundColor: item.id !== "about" ? "#100465ff" : "" }}
         >
           <section id={item.id}>{item.component}</section>
         </div>
