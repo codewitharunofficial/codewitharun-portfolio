@@ -1,7 +1,7 @@
 const experience = [
   {
     roll: "NodeJs Developer",
-    tenure: "September 13, 2023 -July 09, 2024",
+    tenure: "September 13, 2023 - July 09, 2024",
     employer: "Freelance",
     description:
       "I have worked for as a NodeJs Developer for Service Provider and created RestFul APIs, created Backend for different apps with NodeJs, ExpressJs, MongoDB and implemented token based authentication for better data management security. I also created admin panels for a small start-up.",
@@ -11,8 +11,8 @@ const experience = [
 const Experience = () => {
   return (
     <section
-      style={{ backgroundColor: "#100465ff" }}
-      className="container mx-auto py-16 px-6"
+      style={{ backgroundImage: "url(/Background.webp)" }}
+      className="container mx-auto py-16 px-6 min-h-screen"
     >
       <h2 className="text-3xl font-bold text-center text-white">
         Professional Experience
@@ -21,7 +21,7 @@ const Experience = () => {
         {experience.map((exp, index) => (
           <div
             key={index}
-            className="bg-gray-800 hover:bg-gray-700 text-white p-6 rounded-lg shadow-md"
+            className="bg-gray-800 hover:bg-gray-700 text-white p-6 rounded-lg shadow-md gap-3"
           >
             <h3 className="text-xl font-semibold">{exp.roll}</h3>
             <p className="text-white">{exp.employer}</p>
