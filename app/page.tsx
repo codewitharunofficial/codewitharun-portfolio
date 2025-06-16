@@ -3,6 +3,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Qualifications from "@/components/Qualifications";
 import Footer from "@/components/Footer";
+import Experience from "@/components/Experience";
 
 const Components = [
   {
@@ -12,6 +13,10 @@ const Components = [
   {
     component: <Skills />,
     id: "skills",
+  },
+  {
+    component: <Experience />,
+    id: "experience",
   },
   {
     component: <Projects />,
@@ -31,7 +36,11 @@ export default function Home() {
   return (
     <div>
       {Components.map((item, index) => (
-        <div key={index} className="scroll-smooth" style={{backgroundColor: item.id !== 'hero' ? '#100465ff' : "" }}>
+        <div
+          key={index}
+          className="scroll-smooth"
+          style={{ backgroundColor: item.id !== "hero" ? "#100465ff" : "" }}
+        >
           <section id={item.id}>{item.component}</section>
         </div>
       ))}
