@@ -90,7 +90,7 @@ const Header = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-end p-4 mb-5">
+        <div className="flex justify-end p-4 mb-10">
           {/* <button onClick={toggleMenu} aria-label="Close menu">
             <X size={28} />
           </button> */}
