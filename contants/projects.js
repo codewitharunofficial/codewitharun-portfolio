@@ -52,7 +52,7 @@ export const projects = {
         "Subscription model",
         "Multi-device support",
       ],
-      repoLink: "https://github.com/codewitharunofficial/onestop",
+      repoLink: "https://github.com/codewitharunofficial/one-stop",
       appLink: "https://expo.dev/artifacts/eas/iDYFeMZcqR3ftHLqpr3DuC.apk",
       screenshots: [
         "/screenshots/one-stop/one-stop-1.jpg",
@@ -115,7 +115,7 @@ export const projects = {
         "View Stories, Highlights and Posts etc without letting them know",
         "One-click download for Stories and Posts",
       ],
-      repoLink: "https://github.com/codewitharunofficial/insecview",
+      repoLink: "https://github.com/codewitharunofficial/anoninsta",
       appLink: "https://insecview.vercel.app",
       screenshots: [
         "/screenshots/insecview/insecview-1.png",
