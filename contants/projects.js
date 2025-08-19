@@ -84,6 +84,26 @@ export const projects = {
         "/screenshots/vibe/vibe-5.jpg",
       ],
     },
+    {
+      name: "The Assignment Submission App ",
+      logo: "/logos/assignment.png",
+      description:
+        "The Assignment Submission App - IGNOU is a platform for students to submit their assignments easily.",
+      features: [
+        "User-friendly interface",
+        "Easy Assignment Submissions",
+        "Separate Routes For Different Type Of Users",
+      ],
+      repoLink: "https://github.com/codewitharunofficial/assginment_submission",
+      appLink: "https://expo.dev/artifacts/eas/vWCT2BF85RfwRZhEwdi5mw.apk",
+      screenshots: [
+        "/screenshots/assignment/ss-1.png",
+        "/screenshots/assignment/ss-2.png",
+        "/screenshots/assignment/ss-3.png",
+        "/screenshots/assignment/ss-4.png",
+        "/screenshots/assignment/ss-5.png",
+      ],
+    },
   ],
   webApps: [
     {
@@ -121,6 +141,25 @@ export const projects = {
         "/screenshots/insecview/insecview-1.png",
         "/screenshots/insecview/insecview-2.png",
         "/screenshots/insecview/insecview-3.png",
+      ],
+    },
+    {
+      name: "IGNOU Samarth - Clone",
+      logo: "/logos/samarth.svg",
+      description:
+        "Housing Portal - IGNOU is a platform for students to find and manage housing options easily.",
+      features: [
+        "Search for available housing",
+        "Post and manage listings",
+        "User-friendly interface",
+      ],
+      repoLink: "https://github.com/codewitharunofficial/ignou-samarth-clone",
+      appLink: "https://ignou-housing-portal.vercel.app/",
+      screenshots: [
+        "/screenshots/housing/ss-1.png",
+        "/screenshots/housing/ss-2.png",
+        "/screenshots/housing/ss-3.png",
+        "/screenshots/housing/ss-4.png",
       ],
     },
     {

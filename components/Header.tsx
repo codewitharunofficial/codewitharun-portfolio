@@ -20,12 +20,11 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-blue-900 bg-opacity-90 shadow-lg" : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-blue-900 bg-opacity-90 shadow-lg" : "bg-transparent"
+          }`}
       >
-        <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-          <h1 className="text-white text-2xl font-bold font-serif">Ravi</h1>
+        <div className="max-w-9xl mx-auto flex justify-between items-center py-4 px-6">
+          <h1 className="text-white text-2xl font-bold font-serif">{scrolled ? "Ravi" : `"Ravi"`}</h1>
 
           {/* Desktop nav */}
           <nav className="hidden md:block">
@@ -86,9 +85,8 @@ const Header = () => {
 
       {/* Mobile side menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-blue-900 text-white z-40 transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-2/3 sm:w-1/2 bg-blue-900 text-white z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex justify-end p-4 mb-10" />
 
