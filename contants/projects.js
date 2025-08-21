@@ -106,25 +106,7 @@ export const projects = {
     },
   ],
   webApps: [
-    {
-      name: "Chattr-Web",
-      logo: "/logos/Chattr.png",
-      description:
-        "Chattr-Web is the web version of Chatrr, providing real-time messaging and calling features.",
-      features: [
-        "WebRTC-based calls",
-        "Secure messaging",
-        "Responsive UI",
-        "Group chats",
-      ],
-      repoLink: "https://github.com/codewitharunofficial/chattr-web",
-      appLink: "https://chatrr-web.onrender.com",
-      screenshots: [
-        "/screenshots/chattr-web/chattr-web-1.png",
-        "/screenshots/chattr-web/chattr-web-2.png",
-        "/screenshots/chattr-web/chattr-web-3.png",
-      ],
-    },
+
     {
       name: "InsecView",
       logo: "/logos/insecview.webp",
@@ -163,6 +145,43 @@ export const projects = {
       ],
     },
     {
+      name: "InstaTube-DL",
+      logo: "/logos/instatube.png",
+      description:
+        "InstaTube-DL is a powerful tool for downloading videos from Instagram and YouTube.",
+      features: [
+        "Download videos and reels",
+        "Save posts and stories",
+        "User-friendly interface",
+      ],
+      repoLink: "https://github.com/codewitharunofficial/instatube-dl",
+      appLink: "https://insta-tube-web-dl.vercel.app/",
+      screenshots: [
+        "/screenshots/instatube/instatube-1.png",
+        "/screenshots/instatube/instatube-2.png",
+        "/screenshots/instatube/instatube-3.png",
+      ],
+    },
+    {
+      name: "Chattr-Web",
+      logo: "/logos/Chattr.png",
+      description:
+        "Chattr-Web is the web version of Chatrr, providing real-time messaging and calling features.",
+      features: [
+        "WebRTC-based calls",
+        "Secure messaging",
+        "Responsive UI",
+        "Group chats",
+      ],
+      repoLink: "https://github.com/codewitharunofficial/chattr-web",
+      appLink: "https://chatrr-web.onrender.com",
+      screenshots: [
+        "/screenshots/chattr-web/chattr-web-1.png",
+        "/screenshots/chattr-web/chattr-web-2.png",
+        "/screenshots/chattr-web/chattr-web-3.png",
+      ],
+    },
+    {
       name: "Shopease",
       logo: "/logos/shopease.png",
       description:
@@ -181,5 +200,6 @@ export const projects = {
         "/screenshots/shopease/shopease-3.png",
       ],
     },
+
   ],
 };
