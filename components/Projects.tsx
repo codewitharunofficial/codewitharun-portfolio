@@ -8,6 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { projects } from "@/contants/projects";
+import { Cross, CrossIcon } from "lucide-react";
+import { CgClose } from "react-icons/cg";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,17 +56,15 @@ const Projects = () => {
 
       <div className="flex justify-center space-x-4 mb-6">
         <button
-          className={`px-4 py-2 rounded-lg ${
-            category === "mobileApps" ? "bg-blue-500" : "bg-gray-700"
-          }`}
+          className={`px-4 py-2 rounded-lg ${category === "mobileApps" ? "bg-blue-500" : "bg-gray-700"
+            }`}
           onClick={() => handleCategoryChange("mobileApps")}
         >
           📱 Mobile Apps
         </button>
         <button
-          className={`px-4 py-2 rounded-lg ${
-            category === "webApps" ? "bg-blue-500" : "bg-gray-700"
-          }`}
+          className={`px-4 py-2 rounded-lg ${category === "webApps" ? "bg-blue-500" : "bg-gray-700"
+            }`}
           onClick={() => handleCategoryChange("webApps")}
         >
           💻 Web Apps
@@ -138,7 +138,7 @@ const Projects = () => {
         </Swiper>
       </div>
 
-      
+
       <AnimatePresence>
         {isModalOpen && selectedScreenshot && (
           <motion.div
@@ -150,7 +150,7 @@ const Projects = () => {
             onClick={closeModal}
           >
             <motion.div
-              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative object-contain"
+              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative object-fill h-4/5"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -160,13 +160,14 @@ const Projects = () => {
               <img
                 src={selectedScreenshot}
                 alt="Expanded Screenshot"
-                className="max-w-full max-h-svh rounded-lg"
+                className="max-w-full max-h-full rounded-lg"
+                
               />
               <button
                 onClick={closeModal}
-                className="absolute top-2 right-2 px-3 py-1 bg-red-500 text-white rounded-lg"
+                className="absolute top-[-15px] right-[-25px] px-3 p-2 text-black rounded-full bg-blue-400 hover:bg-blue-600 hover:text-white"
               >
-                ✖
+                <CgClose size={24} />
               </button>
             </motion.div>
           </motion.div>

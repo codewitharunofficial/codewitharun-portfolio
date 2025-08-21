@@ -1,0 +1,36 @@
+name: Next.js CI/CD with Render
+
+on:
+   push:
+    branches:
+       - main
+   pull_request:
+    branches:
+       - main
+
+jobs:
+    builds:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Checkout Code
+            uses: actions/checkout@v3
+
+          - name: Check out Repository
+            uses: actions/checkout@v3
+            
+          - name: Set up Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '20'
+            
+          - name: Install Dependecies
+            run: npm install
+
+          - name: Build Next.js app
+            run: npm run build
+
+          - name: Deploy to Render
+            run: |
+              curl -X POST "$RENDER_DEPLOY_HOOK"
+            env:
+            RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}      
