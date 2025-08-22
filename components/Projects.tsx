@@ -8,7 +8,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { projects } from "@/contants/projects";
-import { Cross, CrossIcon } from "lucide-react";
 import { CgClose } from "react-icons/cg";
 
 const Projects = () => {
