@@ -19,6 +19,7 @@ const Projects = () => {
   const [selectedScreenshot, setSelectedScreenshot] = useState<string | null>(
     null
   );
+ const [zoomed, setZoomed] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -149,7 +150,7 @@ const Projects = () => {
             onClick={closeModal}
           >
             <motion.div
-              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative object-fill h-4/5"
+              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative object-fill flex h-4/5 items-center justify-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -159,8 +160,8 @@ const Projects = () => {
               <img
                 src={selectedScreenshot}
                 alt="Expanded Screenshot"
-                className="max-w-full max-h-full rounded-lg"
-                
+                className={`max-h-full ${zoomed ? "w-auto h-auto max-w-none" : "w-full h-full max-w-full"} object-contain cursor-pointer`}
+                onDoubleClick={() => setZoomed(!zoomed)}
               />
               <button
                 onClick={closeModal}
