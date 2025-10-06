@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Profile from "@/public/Profile.jpg";
+import Profile from "@/public/background.png";
 import { SiGithub } from "react-icons/si";
 import { BiFile, BiMailSend } from "react-icons/bi";
 
@@ -14,7 +14,8 @@ const Hero = () => {
         src={Profile}
         alt="Profile Background"
         layout="fill"
-        objectPosition="left"
+        objectPosition="center"
+        objectFit="cover"
         quality={100}
         priority
         className="-z-10 lg:object-contain bg-blue-500 object-cover"

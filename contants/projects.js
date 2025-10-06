@@ -193,7 +193,7 @@ export const projects = {
         "User Dashboard",
       ],
       repoLink: "https://github.com/codewitharunofficial/shopease",
-      appLink: "https://shopease-9f5y.onrender.com/",
+      appLink: "https://shop4ease-vercel.app/",
       screenshots: [
         "/screenshots/shopease/shopease-1.png",
         "/screenshots/shopease/shopease-2.png",
