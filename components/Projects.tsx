@@ -49,7 +49,7 @@ const Projects = () => {
 
   return (
     <section
-      style={{ backgroundImage: "url(/Background.webp)" }}
+      style={{ backgroundImage: "url(/background.png)" }}
       className="py-16 bg-gray-900 text-white text-center min-h-screen"
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-8">🚀 My Projects</h2>

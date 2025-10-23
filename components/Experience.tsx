@@ -11,7 +11,7 @@ const experience = [
 const Experience = () => {
   return (
     <section
-      style={{ backgroundImage: "url(/Background.webp)" }}
+      style={{ backgroundImage: "url(/bg2.jpg)" }}
       className=" py-16 px-6 min-h-screen"
     >
       <h2 className="text-3xl font-bold text-center text-white">
