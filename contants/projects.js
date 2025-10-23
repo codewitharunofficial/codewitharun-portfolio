@@ -75,7 +75,7 @@ export const projects = {
         "Queue Management",
       ],
       repoLink: "https://github.com/codewitharunofficial/vibe-the-music-streaming-app",
-      appLink: "https://expo.dev/artifacts/eas/vWCT2BF85RfwRZhEwdi5mw.apk",
+      appLink: "https://drive.google.com/file/d/1vgVPUG0N6obeDytmbl6xCX1lU-RnAS3c/view?usp=drivesdk",
       screenshots: [
         "/screenshots/vibe/vibe-1.jpg",
         "/screenshots/vibe/vibe-2.jpg",
