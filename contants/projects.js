@@ -95,7 +95,7 @@ export const projects = {
         "Separate Routes For Different Type Of Users",
       ],
       repoLink: "https://github.com/codewitharunofficial/assginment_submission",
-      appLink: "https://expo.dev/artifacts/eas/vWCT2BF85RfwRZhEwdi5mw.apk",
+      appLink: "https://drive.google.com/file/d/1wDcP4h1iQgQmbMYmKLusZyoRvrV-OmF2/view?usp=drive_link",
       screenshots: [
         "/screenshots/assignment/ss-1.png",
         "/screenshots/assignment/ss-2.png",
