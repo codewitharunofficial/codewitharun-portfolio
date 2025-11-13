@@ -16,7 +16,7 @@ const skills = [
   { name: "ReactJs", icon: <SiReact size={30} className="text-blue-500" />, url: "https://react.dev/" },
   {
     name: "NextJs",
-    icon: <SiNextdotjs size={30} className="text-gray-900 dark:text-white" />, url: "https://nextjs.org/"
+    icon: <SiNextdotjs size={30} className="text-yellow-500 dark:text-white" />, url: "https://nextjs.org/"
   },
   {
     name: "NodeJs",
@@ -24,7 +24,7 @@ const skills = [
   },
   {
     name: "ExpressJs",
-    icon: <SiExpress size={30} className="text-gray-700 dark:text-gray-300" />, url: "https://expressjs.com/"
+    icon: <SiExpress size={30} className="text-green-700 dark:text-gray-300" />, url: "https://expressjs.com/"
   },
   { name: "MongoDB", icon: <SiMongodb size={30} className="text-green-600" />, url: "https://cloud.mongodb.com" },
   {
@@ -55,7 +55,7 @@ const Skills = () => {
           <Link
             href={skill.url}
             key={index}
-            className="flex flex-col items-center bg-gray-600 text-white p-4 rounded-lg shadow-md hover:bg-gray-400 cursor-pointer "
+            className="bg-white/10 hover:bg-white/20 backdrop-blur-md transition-all duration-300 text-white p-6 rounded-2xl shadow-lg cursor-pointer flex flex-col justify-between items-center"
             target="_blank"
           >
             {skill.icon}
