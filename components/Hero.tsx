@@ -8,21 +8,7 @@ import { BiFile, BiMailSend } from "react-icons/bi";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Background Image */}
-      <Image
-        src={Profile}
-        alt="Profile Background"
-        layout="fill"
-        objectPosition="center"
-        objectFit="cover"
-        quality={100}
-        priority
-        className="-z-10 lg:object-contain bg-blue-500 object-cover"
-      />
-
-      {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <section className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden backdrop-blur-sm bg-black/30">
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">

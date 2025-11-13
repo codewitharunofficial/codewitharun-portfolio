@@ -47,8 +47,7 @@ const skills = [
 const Skills = () => {
   return (
     <section
-      style={{ backgroundImage: "url(/bg2.jpg)", objectFit: "cover", backfaceVisibility: "revert" }}
-      className="mx-auto p-24 min-h-screen flex flex-col justify-center"
+      className="mx-auto p-24 min-h-screen flex flex-col justify-center backdrop-blur-sm bg-black/30 w-screen"
     >
       <h2 className="text-3xl font-bold text-center text-white">My Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">

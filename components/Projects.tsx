@@ -12,20 +12,14 @@ import { CgClose } from "react-icons/cg";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [category, setCategory] = useState<"mobileApps" | "webApps">(
-    "mobileApps"
-  );
+  const [category, setCategory] = useState<"mobileApps" | "webApps">("mobileApps");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedScreenshot, setSelectedScreenshot] = useState<string | null>(
-    null
-  );
- const [zoomed, setZoomed] = useState(false);
+  const [selectedScreenshot, setSelectedScreenshot] = useState<string | null>(null);
+  const [zoomed, setZoomed] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex(
-        (prevIndex) => (prevIndex + 1) % projects[category].length
-      );
+      setActiveIndex((prevIndex) => (prevIndex + 1) % projects[category].length);
     }, 5000);
     return () => clearInterval(interval);
   }, [category]);
@@ -49,32 +43,35 @@ const Projects = () => {
 
   return (
     <section
-      style={{ backgroundImage: "url(/background.png)" }}
-      className="py-16 bg-gray-900 text-white text-center min-h-screen"
+      id="projects"
+      className="relative flex flex-col items-center justify-center text-white min-h-screen py-15 px-4 backdrop-blur-sm bg-black/30 w-screen"
     >
-      <h2 className="text-3xl md:text-5xl font-bold mb-8">🚀 My Projects</h2>
+      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center">
+        🚀 My Projects
+      </h2>
 
-      <div className="flex justify-center space-x-4 mb-6">
-        <button
-          className={`px-4 py-2 rounded-lg ${category === "mobileApps" ? "bg-blue-500" : "bg-gray-700"
-            }`}
-          onClick={() => handleCategoryChange("mobileApps")}
-        >
-          📱 Mobile Apps
-        </button>
-        <button
-          className={`px-4 py-2 rounded-lg ${category === "webApps" ? "bg-blue-500" : "bg-gray-700"
-            }`}
-          onClick={() => handleCategoryChange("webApps")}
-        >
-          💻 Web Apps
-        </button>
+      {/* Category Buttons */}
+      <div className="flex justify-center flex-wrap gap-4 mb-10">
+        {["mobileApps", "webApps"].map((type) => (
+          <button
+            key={type}
+            onClick={() => handleCategoryChange(type as "mobileApps" | "webApps")}
+            className={`px-5 py-2 rounded-lg text-base font-medium transition-colors ${category === type
+                ? "bg-blue-500 text-white"
+                : "bg-gray-800/70 hover:bg-gray-700"
+              }`}
+          >
+            {type === "mobileApps" ? "📱 Mobile Apps" : "💻 Web Apps"}
+          </button>
+        ))}
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+      {/* Project Section */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl mx-auto">
+        {/* Project Info */}
         <motion.div
           key={project.name}
-          className="max-w-lg text-left px-4"
+          className="max-w-lg text-left bg-black/40 backdrop-blur-md p-6 rounded-2xl shadow-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -83,41 +80,45 @@ const Projects = () => {
             <img
               src={project.logo}
               alt="App Logo"
-              className="w-12 h-12 rounded-lg"
+              className="w-12 h-12 rounded-lg object-cover"
             />
             <h3 className="text-2xl font-semibold">{project.name}</h3>
           </div>
-          <p className="mt-2 text-gray-300">{project.description}</p>
-          <ul className="mt-2 list-disc pl-5 text-gray-400">
+
+          <p className="mt-3 text-gray-300 leading-relaxed">{project.description}</p>
+
+          <ul className="mt-3 list-disc pl-5 text-gray-400 space-y-1">
             {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
           </ul>
+
           <div className="mt-4">
             <a
               href={project.repoLink}
-              className="text-blue-400 hover:underline mr-4"
               target="_blank"
+              className="text-blue-400 hover:underline mr-4"
             >
               🔗 GitHub Repo
             </a>
             <a
               href={project.appLink}
-              className="text-green-400 hover:underline"
               target="_blank"
+              className="text-green-400 hover:underline"
             >
               🚀 View App
             </a>
           </div>
         </motion.div>
 
+        {/* Swiper Slider */}
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           pagination={{ clickable: true }}
           navigation
           loop
-          className="w-[300px] md:w-[400px] rounded-lg overflow-hidden shadow-lg"
+          className="w-[90%] md:w-[400px] max-w-sm rounded-xl overflow-hidden shadow-lg backdrop-blur-md bg-white/10"
         >
           {project.screenshots.map((screenshot, index) => (
             <SwiperSlide
@@ -128,7 +129,7 @@ const Projects = () => {
               <motion.img
                 src={screenshot}
                 alt="Project Screenshot"
-                className="w-full h-[300px] object-contain rounded-lg"
+                className="w-full h-[280px] md:h-[300px] object-contain rounded-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -138,11 +139,11 @@ const Projects = () => {
         </Swiper>
       </div>
 
-
+      {/* Modal */}
       <AnimatePresence>
         {isModalOpen && selectedScreenshot && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -150,24 +151,27 @@ const Projects = () => {
             onClick={closeModal}
           >
             <motion.div
-              className="bg-white p-4 rounded-lg shadow-lg max-w-lg relative object-fill flex h-4/5 items-center justify-center"
+              className="relative bg-white/10 backdrop-blur-xl rounded-xl p-3 shadow-lg w-[90%] md:w-[70%] h-[70%] flex items-center justify-center"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={selectedScreenshot}
                 alt="Expanded Screenshot"
-                className={`max-h-full ${zoomed ? "w-auto h-auto max-w-none" : "w-full h-full max-w-full"} object-contain cursor-pointer`}
+                className={`object-contain transition-all duration-300 ${zoomed
+                    ? "w-auto h-auto max-w-none scale-125"
+                    : "w-full h-full max-w-full"
+                  } cursor-pointer`}
                 onDoubleClick={() => setZoomed(!zoomed)}
               />
               <button
                 onClick={closeModal}
-                className="absolute top-[-15px] right-[-25px] px-3 p-2 text-black rounded-full bg-blue-400 hover:bg-blue-600 hover:text-white"
+                className="absolute top-3 right-3 text-white bg-red-500 hover:bg-red-600 rounded-full p-2"
               >
-                <CgClose size={24} />
+                <CgClose size={22} />
               </button>
             </motion.div>
           </motion.div>
