@@ -47,6 +47,14 @@ const Header = () => {
               </li>
               <li>
                 <a
+                  href="#experience"
+                  className="hover:text-blue-400 hover:underline underline-offset-2"
+                >
+                  Experience
+                </a>
+              </li>
+              <li>
+                <a
                   href="#projects"
                   className="hover:text-blue-400 hover:underline underline-offset-2"
                 >
@@ -61,14 +69,7 @@ const Header = () => {
                   Education
                 </a>
               </li>
-              <li>
-                <a
-                  href="#experience"
-                  className="hover:text-blue-400 hover:underline underline-offset-2"
-                >
-                  Experience
-                </a>
-              </li>
+
             </ul>
           </nav>
 
@@ -111,6 +112,15 @@ const Header = () => {
           </li>
           <li>
             <a
+              href="#experience"
+              onClick={toggleMenu}
+              className="hover:text-blue-400"
+            >
+              Experience
+            </a>
+          </li>
+          <li>
+            <a
               href="#projects"
               onClick={toggleMenu}
               className="hover:text-blue-400"
@@ -125,15 +135,6 @@ const Header = () => {
               className="hover:text-blue-400"
             >
               Education
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              onClick={toggleMenu}
-              className="hover:text-blue-400"
-            >
-              Experience
             </a>
           </li>
         </ul>
