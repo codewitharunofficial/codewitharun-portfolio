@@ -9,10 +9,28 @@ import {
   SiJavascript,
   SiTypescript,
   SiPython,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
 } from "react-icons/si";
 
 
 const skills = [
+  {
+    name: "HTML",
+    icon: <SiHtml5 size={30} className="text-blue-700" />,
+    url: "https://developer.mozilla.org/en-US/docs/Web/Html"
+  },
+  {
+    name: "CSS",
+    icon: <SiCss3 size={30} className="text-yellow-500" />,
+    url: "https://developer.mozilla.org/en-US/docs/Web/css"
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss size={30} className="text-blue-600" />,
+    url: "https://developer.mozilla.org/en-US/docs/Web/css"
+  },
   { name: "ReactJs", icon: <SiReact size={30} className="text-blue-500" />, url: "https://react.dev/" },
   {
     name: "NextJs",
@@ -47,7 +65,7 @@ const skills = [
 const Skills = () => {
   return (
     <section
-      className="mx-auto p-24 min-h-screen flex flex-col justify-center backdrop-blur-sm bg-black/30 w-screen"
+      className="mx-auto p-16 sm:p-24 min-h-screen flex flex-col justify-center backdrop-blur-sm bg-black/30 w-screen"
     >
       <h2 className="text-3xl font-bold text-center text-white">My Skills</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">

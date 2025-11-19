@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { SiGithub } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import { BiFile, BiMailSend } from "react-icons/bi";
 
 const Hero = () => {
@@ -51,7 +51,7 @@ const Hero = () => {
 
         {/* Buttons with Fade-in Animation */}
         <motion.div
-          className="mt-6 flex justify-center gap-4"
+          className="mt-6 flex justify-center gap-4 flex-wrap"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2 }}
@@ -69,7 +69,7 @@ const Hero = () => {
             href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-700 hover:bg-green-800 text-white font-semibold py-2 px-2 md:px-3 rounded-md flex items-center gap-2"
+            className="bg-green-700 hover:bg-green-800 text-white font-semibold py-2 px-4 md:px-4 rounded-md flex items-center gap-2"
             download={true}
           >
             <BiFile size={24} />
@@ -84,6 +84,16 @@ const Hero = () => {
           >
             <SiGithub size={24} />
             GitHub
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 0.9, rotate: -5 }}
+            href="https://linkedin.com/in/ravi5320"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-500 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md flex items-center gap-2"
+          >
+            <SiLinkedin size={24} />
+            LinkedIn
           </motion.a>
         </motion.div>
       </div>
