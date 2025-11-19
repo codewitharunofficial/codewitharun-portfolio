@@ -19,22 +19,22 @@ const skills = [
   {
     name: "HTML",
     icon: <SiHtml5 size={30} className="text-blue-700" />,
-    url: "https://developer.mozilla.org/en-US/docs/Web/Html"
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
   },
   {
     name: "CSS",
     icon: <SiCss3 size={30} className="text-yellow-500" />,
-    url: "https://developer.mozilla.org/en-US/docs/Web/css"
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
   },
   {
     name: "Tailwind",
     icon: <SiTailwindcss size={30} className="text-blue-600" />,
-    url: "https://developer.mozilla.org/en-US/docs/Web/css"
+    url: "https://docs.expo.dev/guides/tailwind/"
   },
   { name: "ReactJs", icon: <SiReact size={30} className="text-blue-500" />, url: "https://react.dev/" },
   {
     name: "NextJs",
-    icon: <SiNextdotjs size={30} className="text-yellow-500 dark:text-white" />, url: "https://nextjs.org/"
+    icon: <SiNextdotjs size={30} className="text-gray-500 dark:text-white" />, url: "https://nextjs.org/"
   },
   {
     name: "NodeJs",
