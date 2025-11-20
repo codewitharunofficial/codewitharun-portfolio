@@ -17,7 +17,7 @@ const Components = [
 export default function Home() {
   return (
     <div
-      className="scroll-smooth bg-fixed bg-center bg-cover bg-no-repeat"
+      className="scroll-smooth bg-fixed bg-center bg-cover bg-no-repeat pt-14"
       style={{
         backgroundImage: "url('/background.png')",
       }}
