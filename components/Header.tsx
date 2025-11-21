@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-blue-900 bg-opacity-90 shadow-lg" : "backdrop-blur-sm"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-blue-900 bg-opacity-90 shadow-lg" : "backdrop-blur-sm shadow-none"
           }`}
       >
         <div className="max-w-9xl mx-auto flex justify-between items-center py-4 px-6">
