@@ -6,7 +6,7 @@ import { BiFile, BiMailSend } from "react-icons/bi";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden backdrop-blur-none bg-black/30">
+    <section className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden backdrop-blur-none">
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
