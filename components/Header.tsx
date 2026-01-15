@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react"; // optional icon library, or use any SVG
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);

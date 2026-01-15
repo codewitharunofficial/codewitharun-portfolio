@@ -117,7 +117,7 @@ export const projects = {
         "View Stories, Highlights and Posts etc without letting them know",
         "One-click download for Stories and Posts",
       ],
-      repoLink: "https://github.com/codewitharunofficial/anoninsta",
+      repoLink: "https://github.com/codewitharunofficial/insecview",
       appLink: "https://insecview.vercel.app",
       screenshots: [
         "/screenshots/insecview/insecview-1.png",
