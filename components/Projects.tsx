@@ -46,7 +46,7 @@ const Projects = () => {
       id="projects"
       className="relative flex flex-col items-center justify-center text-white min-h-screen py-15 px-4 backdrop-blur-sm bg-black/30 w-screen"
     >
-      <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center">
+      <h2 className="text-xl md:text-3xl font-bold mb-8 text-center">
         🚀 My Projects
       </h2>
 

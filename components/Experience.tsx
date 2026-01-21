@@ -23,7 +23,7 @@ const Experience = () => {
       id="experience"
       className="relative py-16 px-6 min-h-screen flex flex-col items-center justify-center text-white backdrop-blur-sm bg-black/30 w-screen"
     >
-      <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
+      <h2 className="text-xl md:text-3xl font-bold text-center mb-10">
         💼 Professional Experience
       </h2>
 
